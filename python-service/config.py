@@ -7,6 +7,8 @@ import logging
 from typing import Dict, Any
 from dotenv import load_dotenv
 import os 
+from dotenv import load_dotenv
+load_dotenv()
 # Set up logging
 logging.basicConfig(
     level=logging.INFO,
