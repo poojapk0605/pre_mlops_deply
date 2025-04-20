@@ -15,7 +15,7 @@ const conversationRoutes = require('./routes/Conversation');
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8080;
 const PYTHON_SERVICE_URL = process.env.PYTHON_SERVICE_URL || 'http://localhost:5001/query';
 const PYTHON_FEEDBACK_URL = process.env.PYTHON_FEEDBACK_URL || 'http://localhost:5001/feedback';
 
