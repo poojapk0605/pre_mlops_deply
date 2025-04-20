@@ -50,4 +50,5 @@ jobs:
             --platform managed \
             --region us-central1 \
             --allow-unauthenticated \
-            --set-env-vars PYTHON_SERVICE_URL=${{ secrets.PYTHON_SERVICE_URL }}
+            --set-secrets="OPEN_API_KEY=OPEN_API_KEY:latest,COHERE_API_KEY=COHERE_API_KEY:latest,PINECONE_API_KEY=PINECONE_API_KEY:latest"
+
