@@ -25,7 +25,7 @@ jobs:
       - name: Build and Push Docker Image
         run: |
           docker build \
-            --build-arg REACT_APP_API_BASE_URL=https://your-api-url.com \
+           --build-arg REACT_APP_API_BASE_URL=/api \
             -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/react-frontend:latest \
             -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/react-frontend:${{ github.sha }} \
             -f neu-chatbot/Dockerfile \
