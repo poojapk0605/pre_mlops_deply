@@ -49,5 +49,10 @@ jobs:
             --image gcr.io/${{ secrets.GCP_PROJECT_ID }}/python-service:${{ github.sha }} \
             --platform managed \
             --region us-central1 \
-            --allow-unauthenticated
-            --set-env-vars OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }},GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }},COHERE_API_KEY=${{ secrets.COHERE_API_KEY }},PINECONE_API_KEY=${{ secrets.PINECONE_API_KEY }}
+            --allow-unauthenticated \
+            --set-env-vars \
+              OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }},\
+              PINECONE_API_KEY=${{ secrets.PINECONE_API_KEY }},\
+              COHERE_API_KEY=${{ secrets.COHERE_API_KEY }},\
+              GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }},\
+              PYTHON_SERVICE_URL=${{ secrets.PYTHON_SERVICE_URL }}
