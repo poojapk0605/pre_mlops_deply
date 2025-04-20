@@ -34,13 +34,13 @@ jobs:
           docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/react-frontend:latest
           docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/react-frontend:${{ github.sha }}
       
-      - name: Build and Push neu-backend Docker Image
+      - name: Build and Push neu-chatbot-backend Docker Image
         run: |
-          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/neu-backend:latest \
-                  -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/neu-backend:${{ github.sha }} \
-                  ./neu-backend
-          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/neu-backend:latest
-          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/neu-backend:${{ github.sha }}       
+          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/neu-chatbot-backend:latest \
+                  -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/neu-chatbot-backend:${{ github.sha }} \
+                  ./neu-chatbot-backend
+          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/neu-chatbot-backend:latest
+          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/neu-chatbot-backend:${{ github.sha }}       
      
       - name: Build and Push Python Service Docker Image
         run: |
