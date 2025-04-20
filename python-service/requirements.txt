@@ -1,0 +1,17 @@
+pymongo
+dnspython
+flask
+flask-cors
+gunicorn
+pinecone-client
+cohere
+langchain
+langchain-openai
+langchain-google-genai
+langchain-core
+langchain-pinecone
+langgraph
+pydantic
+google-generativeai
+openai
+python-dotenv
