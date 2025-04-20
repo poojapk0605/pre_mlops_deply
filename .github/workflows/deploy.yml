@@ -50,4 +50,4 @@ jobs:
             --platform managed \
             --region us-central1 \
             --allow-unauthenticated \
-            --set-env-vars = PYTHON_SERVICE_URL=${{ secrets.PYTHON_SERVICE_URL }}
+            --set-env-vars PYTHON_SERVICE_URL=${{ secrets.PYTHON_SERVICE_URL }}
