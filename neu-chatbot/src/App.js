@@ -285,7 +285,7 @@ const DEFAULT_CONVERSATION = {
 // Main App component
 function App({ user, onLogout }) {
   const [showMenu, setShowMenu] = useState(false);
-  const apiBaseUrl = process.env.REACT_APP_API_BASE_URL;
+  const apiBaseUrl = process.env.REACT_APP_API_BASE_URL || '/api';
 
   const handleLogout = () => {
     // Clear storage to prevent data leakage

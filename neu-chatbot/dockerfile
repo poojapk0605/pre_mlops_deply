@@ -1,43 +1,30 @@
 # Use the official Node.js image as the base
-
 FROM node:18
 
-
 # Set the working directory
-
 WORKDIR /app
 
+# Accept backend URL as build-time argument
+ARG REACT_APP_API_BASE_URL
+ENV REACT_APP_API_BASE_URL=$REACT_APP_API_BASE_URL
 
 # Copy package.json and package-lock.json
-
 COPY package*.json ./
 
-
 # Install dependencies
-
 RUN npm install
 
-
 # Copy the rest of the application code
-
 COPY . .
 
-
-# Build the React app
-
+# Build the React app using the environment variable
 RUN npm run build
 
-
 # Install serve to serve the build
-
 RUN npm install -g serve
 
-
 # Expose the port the app runs on
-
 EXPOSE 3000
 
-
 # Define the default command to run the application
-
 CMD ["serve", "-s", "build"]
