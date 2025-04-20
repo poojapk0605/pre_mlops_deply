@@ -40,8 +40,8 @@ jobs:
           docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/python-service:latest \
                   -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/python-service:${{ github.sha }} \
                   ./python-service
-          docker build -t gcr.io/${{ secrets.GCP_PROJECT_ID }}/python-service:latest ./python-service
           docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/python-service:latest
+          docker push gcr.io/${{ secrets.GCP_PROJECT_ID }}/python-service:${{ github.sha }}
       
       - name: Deploy to Vertex AI
         run: |
