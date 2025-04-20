@@ -10,7 +10,6 @@ __pycache__/
 .env.*
 *.env
 *.key
-*.json
 token.*
 credentials.*
 
@@ -20,7 +19,6 @@ dist/
 build/
 .npm/
 .npmrc
-package-lock.json
 yarn.lock
 
 # ✅ System / IDE / Misc
