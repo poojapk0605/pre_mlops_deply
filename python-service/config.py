@@ -6,7 +6,7 @@ Contains all configurable parameters in one centralized location.
 import logging
 from typing import Dict, Any
 from dotenv import load_dotenv
-
+import os 
 # Set up logging
 logging.basicConfig(
     level=logging.INFO,

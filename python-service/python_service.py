@@ -3,10 +3,11 @@ import json
 import sys
 import time
 import uuid
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 from main import ask_question, clean_answer  # Import your RAG system
-import os
+
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
