@@ -17,7 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Expose port
-EXPOSE 5001
+EXPOSE 8080
 
 # Start the service using gunicorn
-CMD ["gunicorn", "--bind", "0.0.0.0:5001", "python_service:app"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "python_service:app"]
